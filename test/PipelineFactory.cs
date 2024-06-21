@@ -30,7 +30,6 @@ namespace Tests.Util
                     app.Use((context, next) =>
                     {
                         var user = context.User;
-
                         if (user.Identity.IsAuthenticated)
                         {
                             context.Response.StatusCode = 200;
@@ -39,8 +38,7 @@ namespace Tests.Util
                         {
                             context.Response.StatusCode = 401;
                         }
-
-                        return Task.CompletedTask;
+                        return next(context);
                     });
                 }));
         }
