@@ -164,7 +164,7 @@ namespace IdentityServer4.AccessTokenValidation
 
             if (DiscoveryDocumentRefreshInterval.HasValue)
             {
-                var parsedUrl = DiscoveryEndpoint.ParseUrl(Authority);
+                var parsedUrl = DiscoveryEndpoint.ParseUrl(Authority, null);
 
                 var httpClient = new HttpClient(JwtBackChannelHandler ?? new HttpClientHandler())
                 {
