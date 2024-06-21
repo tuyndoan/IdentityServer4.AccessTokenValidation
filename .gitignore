@@ -206,3 +206,4 @@ tools/
 
 # Visual Studio Code workspace options
 .vscode
+.cr/personal/FavoritesList/List.xml
