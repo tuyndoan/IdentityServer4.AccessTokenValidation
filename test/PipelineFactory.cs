@@ -40,7 +40,7 @@ namespace Tests.Util
                             context.Response.StatusCode = 401;
                         }
 
-                        return next(context);
+                        return Task.CompletedTask;
                     });
                 }));
         }
